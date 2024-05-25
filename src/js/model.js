@@ -124,3 +124,7 @@ const clearBookmarks = function(){
 
 };
 // clearBookmarks();
+
+export const uploadRecipe = async function(newRecipe){
+
+}
