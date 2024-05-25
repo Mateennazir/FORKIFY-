@@ -10,14 +10,14 @@ class ResultsView extends View{
   _message ='';
   
  _generateMarkup(){
-    console.log(this.data);
+    
     return this._data.map(this._generateMarkupPreveiw).join('');
  }
 
 
   
  _generateMarkup(){
-  console.log(this._data);
+ 
   return this._data.map(results => previewView.render(results, false)).join('');
 }
 }

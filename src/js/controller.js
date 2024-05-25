@@ -17,15 +17,11 @@ import { async } from 'regenerator-runtime';
 const controlRecipes = async function() {
 
   try{
-      
     const id = window.location.hash.slice(1);
-   
-   
     if (!id) return;
    recipeView.renderSpinner();
 
    // 0) Update results view to mark selected search results
-
    resultsView.update(model.getSearchResultsPage());
    bookmarksView.update(model.state.bookmarks);
 
@@ -38,8 +34,7 @@ const controlRecipes = async function() {
 
     recipeView.renderError();
   }
-  //TEST
-  // controlServings();
+  
 };
 
 const controlSearchResults = async function(){
@@ -101,11 +96,17 @@ const controlAddBookmark = function(){
   recipeView.update(model.state.recipe);
 
   //3 Render bookmarks
-  bookmarksView.render(model.state.bookmarks)
+  bookmarksView.render(model.state.bookmarks);
 }
 
-const init = function(){
+const controlBookmarks = function(){
+  
+  bookmarksView.render(model.state.bookmarks);
+};
 
+
+const init = function(){
+  bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
