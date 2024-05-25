@@ -1,4 +1,5 @@
 import * as model from './model.js';
+import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './views/recipeVeiw.js';
 import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
@@ -104,10 +105,35 @@ const controlBookmarks = function(){
   bookmarksView.render(model.state.bookmarks);
 };
 
-const controlAddRecipe= function( newRecipe){
-  console.log(newRecipe);
+const controlAddRecipe = async function( newRecipe){
+  
+   try{
+
+    // Show loading spinner
+    addRecipeView.renderSpinner();
+   //Upload the new Recipe data
+   await model.uploadRecipe(newRecipe);
+   console.log(model.state.recipe);
+
+    //Render recipe
+    recipeView.render(model.state.recipe);
+
+
+    //Success message
+    addRecipeView.renderMessage();
+
+    //Close form window
+    setTimeout(function(){
+      addRecipeView.toggleWindow()
+    }, MODAL_CLOSE_SEC * 1000);
+
+   }catch(err){
+    console.error(err);
+    addRecipeView.renderError(err.message);
+   }
  
-}
+ 
+};
 
 const init = function(){
   bookmarksView.addHandlerRender(controlBookmarks);
