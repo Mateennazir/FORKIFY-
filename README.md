@@ -22,12 +22,12 @@ You can view the project live here:
 
 The application provides the user with:
 
-- Search for any recipe found in the API, where it will throw out all possible recipes for that dish
-- If there are more than ten recipes, the recipes will be dynamically transferred to each subsequent page, until there are less than ten on that page
-- Click on the desired recipe to view its ingredients
-- Calculates the desired number of portions that the user chooses
-- If the user likes the recipe, he will be able to save it, where the recipe will be saved in the storage, he will be able to see it every time he visits the application
-- There is a possibility to upload a recipe, where the user will have to enter all the necessary ingredients
+ -  Comprehensive Recipe Search: Users can search for any recipe through an API, displaying a wide range of recipes for their desired dish. The search results are paginated, ensuring a smooth user experience by displaying up to ten recipes per page.
+    Interactive Recipe Details: Users can click on a recipe to view detailed ingredients and instructions. Additionally, the application includes a portion calculator, allowing users to adjust the number of servings and automatically update ingredient        quantities accordingly.
+
+ -  Personalized Recipe Saving: Users can save their favorite recipes to local storage. These saved recipes are persistently available, providing easy access to preferred dishes every time the user returns to the application.
+    
+ -  User Recipe Upload: The application allows users to contribute by uploading their own recipes. This feature includes a form where users can enter all necessary ingredients and details, enriching the recipe database with user-generated content.
 
 ## The application provides the user with:
 
