@@ -5,7 +5,7 @@
 Recipe application with custom recipe uploads. 
 
 You can view the project live here:
-[Forkify]
+[Forkify] (https://reciperevel-mateen-chowdhary.netlify.app/)
 
 ---
 
