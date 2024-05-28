@@ -23,7 +23,8 @@ You can view the project live here:
 The application provides the user with:
 
  -  Comprehensive Recipe Search: Users can search for any recipe through an API, displaying a wide range of recipes for their desired dish. The search results are paginated, ensuring a smooth user experience by displaying up to ten recipes per page.
-    Interactive Recipe Details: Users can click on a recipe to view detailed ingredients and instructions. Additionally, the application includes a portion calculator, allowing users to adjust the number of servings and automatically update ingredient        quantities accordingly.
+
+ - Interactive Recipe Details: Users can click on a recipe to view detailed ingredients and instructions. Additionally, the application includes a portion calculator, allowing users to adjust the number of servings and automatically update ingredient        quantities accordingly.
 
  -  Personalized Recipe Saving: Users can save their favorite recipes to local storage. These saved recipes are persistently available, providing easy access to preferred dishes every time the user returns to the application.
     
